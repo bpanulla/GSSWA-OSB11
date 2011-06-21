@@ -70,92 +70,60 @@
         </style>
     </head>
     <body>
-        <div class="slide">
-            <h1>Welcome to Slippy</h1>
-            <h2>Usage</h2>
-            <ul>
-                <li>Navigation: [Left]/[Right] arrows to move, [Space] or [Double Click] to go to next slide</li>
-                <li>Overview: [ESC]/[Del]/[Tab] to view, [Click] to pick one slide</li>
-                <li>Jump: Press [0-9] keys followed by [Enter] to go straight to one slide</li>
-            </ul>
-        </div>
 
-        <div class="slide">
-            <h1>H1's are centered by default</h1>
-            <div class="vcenter">
-                <h2>The class "vcenter" on anything</h2>
-                <ul>
-                    <li>centers it</li>
-                    <li>vertically</li>
-                </ul>
-            </div>
-        </div>
+<div class="slide">
+	<h1>The Web:<h1> 
+        <h1>Links, across the tubes.</h1>
+  <br />
+  <h2>Current links:</h2>
+  <ul>
+    <li>href="..."</li>
+    <li>src="..."</li>
+  </ul>
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <div class="incremental">
+  <h2>Your data can work the same way.</h2>
+  <p>Id's and id references don't all have to be together in your local custom database, they can span the web.</p>
+  <p>The loose coupling provided by this allows many sites to use and colaborate together on data sets.</p>
+ </div>
+</div>
+    <div class="slide">
+  <pre class="brush: js">
+{
+  "person_1" : {
+    "type" : "Person",
+    "name" : "leif",
+    "age" : 32,
+    "knows" : {
+      "type" : "Person"
+      "name" : "brian"
+      "knows" : ...
+     }
+  }
 
-        <div class="slide" data-layout="alt">
-            <h1>Layouts</h1>
-            <h2>This slide uses the "alt" layout</h2>
-            <p>It inherits the class "nochrome" of the layout, which allows you to style it differently, and it doesn't have the footer div that the default layout has for example</p>
-            <p>By default, all slides use the default layout if it's present</p>
-            <p>Layouts must have a &lt;content&gt;&lt;/content&gt; tag that will be replaced by each slide's content</p>
-            <pre class="brush: html">
-                <div class="slide" data-layout="alt">
-                    Foo
-                </div>
-
-                <div class="layout" data-name="default">
-                    <h1>Some title</h1>
-                    <content></content>
-                    <div class="footer">
-                        Footer content
-                    </div>
-                </div>
-
-                <div class="layout nochrome" data-name="alt">
-                    <content></content>
-                </div>
-            </pre>
-        </div>
-
-        <div class="slide">
-            <h1>Syntax Highlighting</h1>
-            <p>Code is just pre tags with class="brush: &lt;language&gt;"</p>
-            <p>The eval class combined with the js brush makes that Execute link appear on the right</p>
-            <pre class="brush: js eval">
-                // in eval'd block, slide is the current slide
-                $(slide).css('background', '#533');
-                // and node is the code block
-                $(node).css('opacity', '.1');
-            </pre>
-            <p>Nifty feature for JS devs doing presentations</p>
-            <br />
-            <p>Also if you use alert() in your code, it's piped into those nicer boxes</p>
-            <pre class="brush: js eval">
-                alert('test');
-            </pre>
-            <p>This is really great to provide interaction during a presentation</p>
-        </div>
-
-        <div class="slide">
-            <h1>Syntax Highlighting</h1>
-            <pre class="brush: php">
-                function foo($var) {
-                    // this is some php code as an example
-                    $foo = new Class("meh");
-                    $foo->bar();
-                }
-            </pre>
-        </div>
-
-        <div class="slide">
-            <h1>Incremental Slides</h1>
-            <p>Hit next</p>
-            <p class="incremental">Every "next slide" action builds up the slide</p>
-            <p class="incremental">element..</p>
-            <p class="incremental">by..</p>
-            <p class="incremental">element.</p>
-            <p class="incremental">For every element that has the incremental class on the slide.</p>
-            <p class="incremental">That's it for now, enjoy!</p>
-        </div>
+  "person_2" : {
+    "name" : "brian"
+  }
+   
+}</pre>
+</div>
+<div class="slide">
+  <pre class="brush: html">
+&lt;p&gt;
+  &lt;span property="name"&gt;Leif&lt;/span&gt;
+  &lt;a rel="knows" href="http://brian.com/"&gt;
+    &lt;span property="name"&gt;Brian&lt;/span&gt;
+  &lt;/a&gt; 
+&lt;/p&gt;
+</pre>
+</div>
+</body>
 
         <div class="layout" data-name="default">
             <content></content>
